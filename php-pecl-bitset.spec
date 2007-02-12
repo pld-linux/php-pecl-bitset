@@ -1,7 +1,7 @@
 %define		_modname	bitset
 %define		_status		stable
 Summary:	%{_modname} - managing sets of bits
-Summary(pl.UTF-8):   %{_modname} - obróbka zbiorów bitów
+Summary(pl.UTF-8):	%{_modname} - obróbka zbiorów bitów
 Name:		php-pecl-%{_modname}
 Version:	1.0
 Release:	3
