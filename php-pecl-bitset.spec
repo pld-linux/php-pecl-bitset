@@ -1,7 +1,7 @@
 %define		_modname	bitset
 %define		_status		stable
 Summary:	%{_modname} - managing sets of bits
-Summary(pl):	%{_modname} - obróbka zbiorów bitów
+Summary(pl.UTF-8):   %{_modname} - obrÃ³bka zbiorÃ³w bitÃ³w
 Name:		php-pecl-%{_modname}
 Version:	1.0
 Release:	3
@@ -23,9 +23,9 @@ Theory.
 
 In PECL status of this extension is: %{_status}.
 
-%description -l pl
-Rozszerzenie to jest bibliotek± do zarz±dzania zbiorami bitów w
-rozumieniu Teorii Zbiorów.
+%description -l pl.UTF-8
+Rozszerzenie to jest bibliotekÄ… do zarzÄ…dzania zbiorami bitÃ³w w
+rozumieniu Teorii ZbiorÃ³w.
 
 To rozszerzenie ma w PECL status: %{_status}.
 
