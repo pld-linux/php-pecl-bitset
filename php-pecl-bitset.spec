@@ -1,34 +1,34 @@
 %define		php_name	php%{?php_suffix}
 %define		modname	bitset
-%define		status		stable
 Summary:	%{modname} - managing sets of bits
 Summary(pl.UTF-8):	%{modname} - obróbka zbiorów bitów
 Name:		%{php_name}-pecl-%{modname}
-Version:	1.0.1
-Release:	4
+Version:	2.0
+Release:	1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	bdd8cb9dcb5546e304e87c6db01d616f
+# Source0-md5:	377e3e3ce071ac10908df8ccdd4a5a26
 URL:		http://pecl.php.net/package/bitset/
-BuildRequires:	%{php_name}-devel >= 3:5.0.0
+BuildRequires:	%{php_name}-devel >= 3:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Requires:	php(core) >= 5.0.4
 Obsoletes:	php-pear-%{modname}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This extension is a library for managing sets of bits in terms of Set
-Theory.
+The BitSet library assists by providing a mechanism to manage sets of
+bits. This provides a similar API (object-based) to java.util.BitSet
+with some PHP-specific flavoring.
 
-In PECL status of this extension is: %{status}.
+The original functions provided under 1.0 are still available, though
+deprecated as of 2.0 and will be removed under 3.0.
+
+IMPORTANT: Versions 2.0 and higher of this extension require PHP 5.3+
 
 %description -l pl.UTF-8
 Rozszerzenie to jest biblioteką do zarządzania zbiorami bitów w
 rozumieniu Teorii Zbiorów.
-
-To rozszerzenie ma w PECL status: %{status}.
 
 %prep
 %setup -qc
@@ -61,6 +61,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CREDITS EXPERIMENTAL README
+%doc CREDITS README
 %config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
 %attr(755,root,root) %{php_extensiondir}/%{modname}.so
