@@ -4,7 +4,7 @@ Summary:	%{modname} - managing sets of bits
 Summary(pl.UTF-8):	%{modname} - obróbka zbiorów bitów
 Name:		%{php_name}-pecl-%{modname}
 Version:	2.0
-Release:	2
+Release:	3
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
