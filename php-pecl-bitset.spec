@@ -4,7 +4,7 @@ Summary:	%{modname} - managing sets of bits
 Summary(pl.UTF-8):	%{modname} - obróbka zbiorów bitów
 Name:		%{php_name}-pecl-%{modname}
 Version:	2.0
-Release:	3
+Release:	4
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
@@ -13,8 +13,8 @@ URL:		http://pecl.php.net/package/bitset/
 BuildRequires:	%{php_name}-devel >= 3:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.650
 %{?requires_php_extension}
-Obsoletes:	php-pear-%{modname}
 Provides:	php(%{modname}) = %{version}
+Obsoletes:	php-pecl-bitset < 2.0-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +43,7 @@ phpize
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{php_sysconfdir}/conf.d,%{php_extensiondir}}
-install modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
+install -p modules/%{modname}.so $RPM_BUILD_ROOT%{php_extensiondir}
 cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 ; Enable %{modname} extension module
 extension=%{modname}.so
