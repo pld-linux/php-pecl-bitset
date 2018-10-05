@@ -3,12 +3,12 @@
 Summary:	%{modname} - managing sets of bits
 Summary(pl.UTF-8):	%{modname} - obróbka zbiorów bitów
 Name:		%{php_name}-pecl-%{modname}
-Version:	2.0
-Release:	4
+Version:	3.0.1
+Release:	1
 License:	PHP 3.01
 Group:		Development/Languages/PHP
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-# Source0-md5:	377e3e3ce071ac10908df8ccdd4a5a26
+# Source0-md5:	919b7a17a2ab19fbc59c46d4cf0aa788
 URL:		http://pecl.php.net/package/bitset/
 BuildRequires:	%{php_name}-devel >= 3:5.3.0
 BuildRequires:	rpmbuild(macros) >= 1.650
